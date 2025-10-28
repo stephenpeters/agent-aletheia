@@ -1,0 +1,23 @@
+# Local agent-sdk dependency
+-e ../agent-sdk
+
+# FastAPI and server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# AI/LLM
+anthropic>=0.7.0
+
+# Content fetching
+httpx>=0.25.0
+beautifulsoup4>=4.12.0
+feedparser>=6.0.0
+PyPDF2>=3.0.0
+youtube-transcript-api>=0.6.0
+
+# Configuration
+pyyaml>=6.0
+
+# ML/Scoring
+scikit-learn>=1.3.0
+numpy>=1.24.0

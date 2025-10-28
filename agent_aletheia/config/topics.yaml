@@ -1,0 +1,55 @@
+topics:
+  primary:
+    - name: "Artificial Intelligence"
+      keywords: ["AI", "artificial intelligence", "machine learning", "LLM", "large language model", "deep learning", "neural network"]
+      weight: 1.0
+      subtopics:
+        - "AI in healthcare"
+        - "AI safety"
+        - "Generative AI"
+        - "AI agents"
+
+    - name: "Technology & Innovation"
+      keywords: ["technology", "innovation", "startup", "digital transformation", "tech trends", "software"]
+      weight: 0.9
+      subtopics:
+        - "SaaS trends"
+        - "Cloud computing"
+        - "Developer tools"
+        - "Open source"
+
+    - name: "Business Strategy"
+      keywords: ["strategy", "business model", "leadership", "growth", "product strategy", "market"]
+      weight: 0.8
+      subtopics:
+        - "Product strategy"
+        - "Go-to-market"
+        - "Team building"
+        - "Scaling"
+
+  secondary:
+    - name: "Product Management"
+      keywords: ["product management", "roadmap", "user research", "PM", "product-market fit"]
+      weight: 0.7
+
+    - name: "Data Science"
+      keywords: ["data science", "analytics", "data engineering", "ML ops", "data visualization"]
+      weight: 0.6
+
+  exclude:
+    - "celebrity gossip"
+    - "sports scores"
+    - "weather"
+    - "entertainment news"
+    - "political drama"
+
+scoring:
+  novelty_weight: 0.4
+  topicality_weight: 0.3
+  relevance_weight: 0.3
+  minimum_score: 0.65
+
+filters:
+  min_content_length: 500  # Minimum article length in words
+  max_age_days: 7  # Only consider content from last N days
+  languages: ["en"]  # Supported languages
