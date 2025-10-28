@@ -4,13 +4,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from agent_sdk.utils import setup_logger
 from agent_aletheia.routes.ideas import router as ideas_router
+from agent_aletheia.routes.chat import router as chat_router
 
 logger = setup_logger("aletheia.main")
 
 app = FastAPI(
     title="Aletheia - Idea Discovery Agent",
-    description="Content discovery and evaluation agent for the Mnemosyne system",
-    version="0.1.0",
+    description="Content discovery, evaluation, and conversational ideation agent for the Mnemosyne system",
+    version="0.2.0",
 )
 
 # CORS middleware
@@ -24,6 +25,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(ideas_router)
+app.include_router(chat_router)
 
 
 @app.get("/healthz")
